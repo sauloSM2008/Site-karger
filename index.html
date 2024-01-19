@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SITE KARGER</title>
+</head>
+<body>
+  <h1>BEM VINDO A PÁGINA DO KARGER</h1>
+
+  <h2>BOT MISTK</h2>
+  <p>O BOT MISTK custa 500MT por 4 dias.</p>
+  <button onclick="comprar('MISTK', '4 dias', '500MT')">Comprar BOT MISTK</button>
+
+  <h2>BOT HUNTER</h2>
+  <p>O BOT HUNTER custa:</p>
+  <ul>
+    <li>600MT por 7 dias</li>
+    <li>800MT por 15 dias</li>
+    <li>1000MT por 30 dias</li>
+  </ul>
+  <button onclick="comprar('HUNTER', '7 dias', '600MT')">Comprar BOT HUNTER (7 dias)</button>
+  <button onclick="comprar('HUNTER', '15 dias', '800MT')">Comprar BOT HUNTER (15 dias)</button>
+  <button onclick="comprar('HUNTER', '30 dias', '1000MT')">Comprar BOT HUNTER (30 dias)</button>
+
+  <script>
+    function comprar(bot, periodo, preco) {
+      window.open("https://wa.me/258878530996?text=Olá! Gostaria de comprar o " + bot + " por " + periodo + " pelo valor de " + preco + ".");
+    }
+  </script>
+</body>
+</html>
