@@ -59,26 +59,64 @@
             border-top: 1px solid #eee;
         }
         
-        .whatsapp-button {
-            margin-top: 30px;
-            padding: 15px 25px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #25d366;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
+        
         .whatsapp-button:hover {
             background-color: #1ebe5b;
         }
+        
+        button {
+          background-image: linear-gradient(to right, black, white);
+          border: none;
+          border-radius: 5px;
+          padding: 15px 25px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+          margin-top: 7px;
+          
+        }
+        
+        button:hover {
+          transform: scale(1.1);
+        }
+        
+        #vid:hover {
+          transform: scale(1.5);
+        }
+        
+        #vid {
+          width: 80%;
+          height: 250px;
+        }
+        
+        #dialog {
+          background: #EEEEEE;
+          width: 70%;
+          border-radius: 8px;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+          z-index: 1000;
+          position: fixed;
+          padding: 15px;
+          display: block;
+          box-shadow: rgba(0, 0, 0, 1);
+        }
+   
    
     </style>
 </head>
 <body>
+  
+  <div id="dialog">
+    
+    <center><video id="vid" controls type="video/mp4" src="video.mp4"></video></center>
+    
+    <center><button onclick="fech" id="bt">Fechar diálogo</button></center>
+    
+  </div>
+  
+  
     <h1>Melhores Casas de Apostas em Moçambique</h1>
+   
     <div class="container">
         <div class="card">
             <img onclick="ca1()" src="casa1.jpg" alt="Casa de Apostas 1">
@@ -109,10 +147,19 @@
             <div class="card-title">WINNER</div>
         </div>
     </div>
+    
+   
       <button class="whatsapp-button" onclick="openWhatsApp()">Suporte</button>
     
    
     <script>
+    
+      document.getElementById("bt").addEventListener('click', 
+      function() {
+        document.getElementById('dialog').style.display = 'none';
+      });
+    
+    
       function ca1(){
         window.open("https://media.888africa.com/C.ashx?btag=a_4176b_437c_&affid=3450&siteid=4176&adid=437&c=")
       }
