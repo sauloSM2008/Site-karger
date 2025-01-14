@@ -101,6 +101,25 @@
           display: block;
           box-shadow: rgba(0, 0, 0, 1);
         }
+        
+        .dialog-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .dialog-button {
+      padding: 10px 20px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      flex: 1;
+    }
+
    
    
     </style>
@@ -112,6 +131,10 @@
     <center><video id="vid" controls type="video/mp4" src="video.mp4"></video></center>
     
     <center><button onclick="fech" id="bt">Fechar diálogo</button></center>
+    <div class="dialog-footer">
+      <button class="dialog-button" id="shareBtn">COMPARTILHAR NO WHATSAPP</button>
+     
+    </div>
     
   </div>
   
@@ -154,6 +177,12 @@
     
    
     <script>
+    
+    document.getElementById('shareBtn').addEventListener('click', function() {
+      const message = encodeURIComponent("Venha ver as melhores casas de apostas de Moçambique e ganha bônus exclusivo: https://melhores-casas-apostas.vercel.app/");
+      const whatsappUrl = `https://wa.me/?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    });
     
       document.getElementById("bt").addEventListener('click', 
       function() {
