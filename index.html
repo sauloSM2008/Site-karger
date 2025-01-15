@@ -39,6 +39,21 @@
             overflow: hidden;
             transition: transform 0.3s ease;
         }
+        
+        #direg {
+      background: #FFFFFF;
+      box-shadow: rgba(0, 0, 0, 1);
+      border-radius: 8px;
+      width: 90%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      position: fixed;
+      padding: 8px;
+      position: none;
+      display: none;
+    }
+
 
         .card:hover {
             transform: scale(1.05);
@@ -71,6 +86,7 @@
           padding: 15px 25px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
           margin-top: 7px;
+          margin-bottom: 15px;
           
         }
         
@@ -119,15 +135,29 @@
       transition: background 0.3s;
       flex: 1;
     }
-
+    
+    
    
    
     </style>
 </head>
 <body>
   
+  <div id="direg">
+    <center><h><b><em>SIGA OS PASSOS A BAIXO PARA SE REGISTRAR</em></b></h></center>
+    <center><p><em>1_Após ter selecionado a casa clika em registro ou registrar-se</em></p></center>
+    <center><p><em>2_Coloque o seu número de telefone onde é necessário</em></p></center>
+    <center><p><em>3_Coloque uma senha que não vais esquecer que tenha pelo menos 6 dígitos</em></p></center>
+    <center><p><em>4_Confirme novamente a senha</em></p></center>
+    <center><p><em>5_Clike em registrar-se</em></p></center>
+    <center><p><em>6_De seguida inicie sessão colocando o seu número e sua senha que usou oara criar a conta</em></p></center>
+    
+    <center><button id="fecht">FECHAR DIÁLOGO</button></center>
+    
+    </div>
+  
   <div id="dialog">
-    <center><p><b><em>VEJA A BAIXO COMO FAZER 100,000.00,MT</em></b></p></center>
+    <center><p><b><em>VEJA A BAIXO COMO FAZER 100,000.00MT</em></b></p></center>
     <center><video id="vid" controls type="video/mp4" src="video.mp4"></video></center>
     
     <center><button onclick="fech" id="bt">Fechar diálogo</button></center>
@@ -139,7 +169,11 @@
   </div>
   
   
+  
+  
     <h1>Melhores Casas de Apostas em Moçambique</h1>
+    
+    <button id="Regi">COMO SE REGISTRAR</button>
    
     <div class="container">
         <div class="card">
@@ -178,6 +212,11 @@
    
     <script>
     
+    document.getElementById('Regi').addEventListener('click',
+    function() {
+      document.getElementById('direg').style.display = 'block';
+    });
+    
     document.getElementById('shareBtn').addEventListener('click', function() {
       const message = encodeURIComponent("Venha ver as melhores casas de apostas de Moçambique e ganha bônus exclusivo: https://melhores-casas-apostas.vercel.app/");
       const whatsappUrl = `https://wa.me/?text=${message}`;
@@ -188,6 +227,11 @@
       function() {
         document.getElementById('dialog').style.display = 'none';
       });
+      
+      document.getElementById("fecht").addEventListener('click',
+        function() {
+          document.getElementById('direg').style.display = 'none';
+        });
     
     
       function ca1(){
