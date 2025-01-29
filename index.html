@@ -5,266 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melhores Casas de Apostas em Moçambique</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
         h1 {
-            color: #333;
-            font-size: 16px;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             text-align: center;
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+            }
         }
 
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            width: 80%;
+            width: 90%;
             max-width: 1200px;
         }
 
         .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #444;
+            border-radius: 15px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        
-        #direg {
-      background: #FFFFFF;
-      box-shadow: rgba(0, 0, 0, 1);
-      border-radius: 8px;
-      width: 90%;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-      position: fixed;
-      padding: 8px;
-      position: none;
-      display: none;
-    }
-
 
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
         }
 
         .card img {
             width: 100%;
             height: 150px;
             object-fit: cover;
+            border-bottom: 3px solid #ffcc00;
         }
 
         .card-title {
             font-size: 1.2rem;
-            color: #555;
+            color: #ffcc00;
             padding: 15px;
             text-align: center;
-            background-color: #f7f7f7;
-            border-top: 1px solid #eee;
+            background: #333;
+            border-top: 1px solid #555;
         }
-        
-        
-        .whatsapp-button:hover {
-            background-color: #1ebe5b;
-        }
-        
-        button {
-          background-image: linear-gradient(to right, black, white);
-          border: none;
-          border-radius: 5px;
-          padding: 15px 25px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
-          margin-top: 7px;
-          margin-bottom: 15px;
-          
-        }
-        
-        button:hover {
-          transform: scale(1.1);
-        }
-        
-        #vid:hover {
-          transform: scale(1.5);
-        }
-        
-        #vid {
-          width: 80%;
-          height: 250px;
-          border-radius: 10px;
-        }
-        
-        #dialog {
-          background: #EEEEEE;
-          width: 70%;
-          border-radius: 8px;
-          transform: translate(-50%, -50%);
-          left: 50%;
-          top: 50%;
-          z-index: 1000;
-          position: fixed;
-          padding: 15px;
-          display: block;
-          box-shadow: rgba(0, 0, 0, 1);
-        }
-        
-        .dialog-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
 
-    .dialog-button {
-      padding: 10px 20px;
-      background: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-      flex: 1;
-    }
-    
-    
-   
-   
+        button {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            color: #1a1a1a;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.8);
+        }
+
+        #dialog, #direg {
+            background: #444;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+
+        #dialog video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .dialog-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .dialog-button {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: #1a1a1a;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+        }
+
+        .dialog-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.8);
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.8);
+        }
     </style>
 </head>
 <body>
-  
-  <div id="direg">
-    <center><h><b><em>SIGA OS PASSOS A BAIXO PARA SE REGISTRAR</em></b></h></center>
-    <center><p><em>1_Após ter selecionado a casa clika em registro ou registrar-se</em></p></center>
-    <center><p><em>2_Coloque o seu número de telefone onde é necessário</em></p></center>
-    <center><p><em>3_Coloque uma senha que não vais esquecer que tenha pelo menos 6 dígitos</em></p></center>
-    <center><p><em>4_Confirme novamente a senha</em></p></center>
-    <center><p><em>5_Clike em registrar-se</em></p></center>
-    <center><p><em>6_De seguida inicie sessão colocando o seu número e sua senha que usou oara criar a conta</em></p></center>
-    
-    <center><button id="fecht">FECHAR DIÁLOGO</button></center>
-    
+    <div id="direg">
+        <h1><b><em>SIGA OS PASSOS ABAIXO PARA SE REGISTRAR</em></b></h1>
+        <p><em>1. Após selecionar a casa, clique em "Registrar-se".</em></p>
+        <p><em>2. Insira seu número de telefone.</em></p>
+        <p><em>3. Crie uma senha segura (mínimo 6 dígitos).</em></p>
+        <p><em>4. Confirme a senha.</em></p>
+        <p><em>5. Clique em "Registrar-se".</em></p>
+        <p><em>6. Faça login com seu número e senha.</em></p>
+        <button id="fecht">FECHAR</button>
     </div>
-  
-  <div id="dialog">
-    <center><p><b><em>VEJA A BAIXO COMO FAZER 100,000.00MT</em></b></p></center>
-    <center><video id="vid" controls type="video/mp4" src="video.mp4"></video></center>
-    
-    <center><button onclick="fech" id="bt">Fechar diálogo</button></center>
-    <div class="dialog-footer">
-      <button class="dialog-button" id="shareBtn">COMPARTILHAR NO WHATSAPP</button>
-     
+
+    <div id="dialog">
+        <h1><b><em>VEJA COMO GANHAR 100,000.00MT</em></b></h1>
+        <video controls src="video.mp4"></video>
+        <div class="dialog-footer">
+            <button class="dialog-button" id="shareBtn">COMPARTILHAR NO WHATSAPP</button>
+            <button class="dialog-button" id="bt">FECHAR</button>
+        </div>
     </div>
-    
-  </div>
-  
-  
-  
-  
+
     <h1>Melhores Casas de Apostas em Moçambique</h1>
-    
     <button id="Regi">COMO SE REGISTRAR</button>
-   
+
     <div class="container">
-        <div class="card">
-            <img onclick="ca1()" src="casa1.jpg" alt="Casa de Apostas 1">
+        <div class="card" onclick="ca1()">
+            <img src="casa1.jpg" alt="BACELABET">
             <div class="card-title">BACELABET</div>
         </div>
-        <div class="card">
-            <img onclick="ca2()" src="casa2.jpg" alt="Casa de Apostas 2">
+        <div class="card" onclick="ca2()">
+            <img src="casa2.jpg" alt="ELEPHANT BET">
             <div class="card-title">ELEPHANT BET</div>
         </div>
-        <div class="card">
-            <img onclick="ca3()" src="casa3.jpg" alt="Casa de Apostas 3">
+        <div class="card" onclick="ca3()">
+            <img src="casa3.jpg" alt="OLABET">
             <div class="card-title">OLABET</div>
         </div>
-        <div class="card">
-            <img onclick="ca4()" src="casa4.jpg" alt="Casa de Apostas 4">
+        <div class="card" onclick="ca4()">
+            <img src="casa4.jpg" alt="BANTUBET">
             <div class="card-title">BANTUBET</div>
         </div>
-        <div class="card">
-            <img onclick="ca5()" src="casa5.jpg" alt="Casa de Apostas 5">
+        <div class="card" onclick="ca5()">
+            <img src="casa5.jpg" alt="PLACARD">
             <div class="card-title">PLACARD</div>
         </div>
-        <div class="card">
-            <img onclick="ca6()" src="casa6.jpg" alt="Casa de Apostas 6">
+        <div class="card" onclick="ca6()">
+            <img src="casa6.jpg" alt="888BETS">
             <div class="card-title">888BETS</div>
         </div>
-        <div class="card">
-            <img onclick="ca7()" src="casa7.jpg" alt="Casa de Apostas 7">
+        <div class="card" onclick="ca7()">
+            <img src="casa7.jpg" alt="WINNER">
             <div class="card-title">WINNER</div>
         </div>
     </div>
-    
-   
-      <button class="whatsapp-button" onclick="openWhatsApp()">Suporte</button>
-    
-   
+
+    <button class="whatsapp-button" onclick="openWhatsApp()">SUPORTE VIA WHATSAPP</button>
+
     <script>
-    
-    document.getElementById('Regi').addEventListener('click',
-    function() {
-      document.getElementById('direg').style.display = 'block';
-    });
-    
-    document.getElementById('shareBtn').addEventListener('click', function() {
-      const message = encodeURIComponent("Venha ver as melhores casas de apostas de Moçambique e ganha bônus exclusivo: https://melhores-casas-apostas.vercel.app/");
-      const whatsappUrl = `https://wa.me/?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-    });
-    
-      document.getElementById("bt").addEventListener('click', 
-      function() {
-        document.getElementById('dialog').style.display = 'none';
-      });
-      
-      document.getElementById("fecht").addEventListener('click',
-        function() {
-          document.getElementById('direg').style.display = 'none';
+        document.getElementById('Regi').addEventListener('click', function() {
+            document.getElementById('direg').style.display = 'block';
         });
-    
-    
-      function ca1(){
-        window.open("https://media.888africa.com/C.ashx?btag=a_4176b_437c_&affid=3450&siteid=4176&adid=437&c=")
-      }
-      
-      function ca2(){
-        window.open("https://record.elephantbet.com/_rbXIYyWpV7wWqcfzuvZcQGNd7ZgqdRLk/1/")
-      }
-      
-      function ca3() {
-        window.open("https://tracking.olabet.co.mz/C.ashx?btag=a_2032b_7c_&affid=1975&siteid=2032&adid=7&c=")
-      }
-      
-      function ca4() {
-        window.open("https://sshortly.net/d5f230b")
-      }
-      
-      function ca5() {
-        window.open("https://media1.placard.co.mz/redirect.aspx?pid=6727&bid=1708")
-      }
-      
-      function ca6() {
-        window.open("https://media.888africa.com/C.ashx?btag=a_4176b_423c_&affid=3450&siteid=4176&adid=423&c=")
-      }
-      
-      function ca7() {
-        window.open("https://track.africabetpartners.com/visit/?bta=36968&nci=6280")
-      }
-      
-      function openWhatsApp() {
-        window.open("https://wa.me/258849200525?text=Olá,  já me registei em uma casa de aposta, e preciso do bot.");
-      }
+
+        document.getElementById('shareBtn').addEventListener('click', function() {
+            const message = encodeURIComponent("Venha ver as melhores casas de apostas de Moçambique e ganhe bônus exclusivo: https://melhores-casas-apostas.vercel.app/");
+            const whatsappUrl = `https://wa.me/?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        document.getElementById("bt").addEventListener('click', function() {
+            document.getElementById('dialog').style.display = 'none';
+        });
+
+        document.getElementById("fecht").addEventListener('click', function() {
+            document.getElementById('direg').style.display = 'none';
+        });
+
+        function ca1() {
+            window.open("https://media.888africa.com/C.ashx?btag=a_4176b_437c_&affid=3450&siteid=4176&adid=437&c=");
+        }
+
+        function ca2() {
+            window.open("https://record.elephantbet.com/_rbXIYyWpV7wWqcfzuvZcQGNd7ZgqdRLk/1/");
+        }
+
+        function ca3() {
+            window.open("https://tracking.olabet.co.mz/C.ashx?btag=a_2032b_7c_&affid=1975&siteid=2032&adid=7&c=");
+        }
+
+        function ca4() {
+            window.open("https://sshortly.net/d5f230b");
+        }
+
+        function ca6() {
+            window.open("https://media.888africa.com/C.ashx?btag=a_4176b_423c_&affid=3450&siteid=4176&adid=423&c=");
+        }
+
+        function ca7() {
+            window.open("https://track.africabetpartners.com/visit/?bta=36968&nci=6280");
+        }
+
+        function openWhatsApp() {
+            window.open("https://wa.me/258849200525?text=Olá, já me registei em uma casa de aposta, e preciso do bot.");
+        }
     </script>
 </body>
-    </html>
+</html>
